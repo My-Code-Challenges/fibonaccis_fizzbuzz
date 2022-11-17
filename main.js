@@ -6,6 +6,8 @@ var fibsFizzBuzz = function(n) {
 implementation from https://medium.com/developers-writing/fibonacci-sequence-algorithm-in-javascript-b253dc7e320e
 */
 
+let arr = []
+
 function fibonacci(num){
     var a = 1, b = 0, temp;
   
@@ -13,10 +15,10 @@ function fibonacci(num){
       temp = a;
       a = a + b;
       b = temp; // b updates
+      arr.push(b)
       num--;
     }
-  
-    return b;
   }
 
-  fibonacci(4)
+  fibonacci(5)
+  console.log(arr);
